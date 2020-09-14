@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="position"
+            type="Integer" />
+
+        <variable
+            name="model"
+            type="com.nk.genericadapter.model.AndroidVersion" />
+
+        <variable
+            name="actionListener"
+            type="com.nk.genericadapter.base.BaseAdapter.OnItemActionListener" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:onClick="@{()->actionListener != null? actionListener.onItemClicked(position):void}"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{model.name}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@tools:sample/first_names" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
