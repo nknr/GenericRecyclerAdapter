@@ -6,37 +6,31 @@
     <data>
 
         <variable
-            name="position"
-            type="Integer" />
-
-        <variable
             name="model"
-            type="com.nk.genericadapter.model.AndroidVersion" />
+            type="com.nk.genericadapter.model.GoogleProduct" />
 
-        <variable
-            name="actionListener"
-            type="com.nk.genericadapter.base.BaseAdapter.OnItemActionListener" />
 
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/white"
         android:foreground="?android:selectableItemBackground"
-        android:onClick="@{()->actionListener != null? actionListener.onItemClicked(position):void}"
-        android:padding="16dp"
+        android:padding="8dp"
+        android:layout_marginEnd="8dp"
         tools:ignore="UnusedAttribute">
 
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{model.name}"
             android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:fontFamily="sans-serif-smallcaps"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="@tools:sample/first_names" />
+            tools:text="@tools:sample/lorem" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
