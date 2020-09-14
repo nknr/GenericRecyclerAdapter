@@ -19,6 +19,8 @@ remove **NullPointerException** when do not use of listener
 android:onClick="@{()->actionListener != null? actionListener.onItemClicked(position):void}"
 ```
 
+![Screen](../master/screenshot/image.png)
+
 
 ## Reference 
 https://proandroiddev.com/using-a-generic-recyclerview-adapter-for-all-the-lists-in-your-android-application-6724501a9d
