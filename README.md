@@ -13,5 +13,12 @@ BaseAdapter<AndroidVersion> adapter = new BaseAdapter<>(R.layout.item_android_ve
                         , Toast.LENGTH_SHORT).show());
 ```
 
+
+remove **NullPointerException** when do not use of listener
+```
+android:onClick="@{()->actionListener != null? actionListener.onItemClicked(position):void}"
+```
+
+
 ## Reference 
 https://proandroiddev.com/using-a-generic-recyclerview-adapter-for-all-the-lists-in-your-android-application-6724501a9d
