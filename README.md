@@ -1,6 +1,6 @@
 # GenericRecyclerAdapter
 
-The main purpose of this repo to reduce creating **RecyclerAdapter** and **ViewHolder** to display data on view and one listener
+The main purpose of this repo to reduce of creating **RecyclerAdapter** and **ViewHolder** to display data on view with item click
 ```
 BaseAdapter<AndroidVersion> adapter = new BaseAdapter<>(R.layout.item_android_version);
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
