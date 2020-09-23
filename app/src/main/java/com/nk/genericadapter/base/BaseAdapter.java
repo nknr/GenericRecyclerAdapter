@@ -1,6 +1,7 @@
 package com.nk.genericadapter.base;
 
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.LayoutRes;
@@ -31,6 +32,7 @@ public class BaseAdapter<D> extends RecyclerView.Adapter<BaseAdapter<?>.BaseView
 
     public void setList(List<D> list) {
         this.list = list;
+        notifyDataSetChanged();
     }
 
     @NonNull
@@ -93,6 +95,6 @@ public class BaseAdapter<D> extends RecyclerView.Adapter<BaseAdapter<?>.BaseView
 
 
     public interface OnItemActionListener {
-        void onItemClicked(int position);
+        void onItemClicked(View view, int position);
     }
 }

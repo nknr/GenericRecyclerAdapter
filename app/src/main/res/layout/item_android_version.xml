@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:background="@android:color/white"
         android:foreground="?android:selectableItemBackground"
-        android:onClick="@{()->actionListener != null? actionListener.onItemClicked(position):void}"
+        android:onClick="@{(view)->actionListener != null? actionListener.onItemClicked(view,position):void}"
         android:padding="16dp"
         tools:ignore="UnusedAttribute">
 
