@@ -7,16 +7,16 @@ binding.recyclerView.setAdapter(adapter);
 ```
 
 ```
-adapter.setActionListener(position ->
+adapter.setActionListener((view,position) ->
                 Toast.makeText(this
-                        , ((AndroidVersion) adapter.getItemAtPosition(position)).getName()
+                        , adapter.getItemAtPosition(position).getName()
                         , Toast.LENGTH_SHORT).show());
 ```
 
 
 remove **NullPointerException** when do not use of listener
 ```
-android:onClick="@{()->actionListener != null? actionListener.onItemClicked(position):void}"
+android:onClick="@{(view)->actionListener != null? actionListener.onItemClicked(view,position):void}"
 ```
 
 ![Screen](../master/screenshot/image.png)
