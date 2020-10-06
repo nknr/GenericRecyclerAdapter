@@ -64,6 +64,11 @@ public class BaseAdapter<D> extends RecyclerView.Adapter<BaseAdapter<?>.BaseView
         notifyItemChanged(position);
     }
 
+    public void removeItem(int position){
+        list.remove(position);
+        notifyItemRemoved(position);
+    }
+
 
 
     public D getItemAtPosition(int position) {

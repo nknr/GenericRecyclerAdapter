@@ -48,9 +48,9 @@ public class MainActivity extends BaseActivity<MainViewModel,ActivityMainBinding
         biding.recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
         biding.recyclerView.setAdapter(adapter);
         adapter.setList(ConstantValues.getAndroidVersion());
-        adapter.setActionListener(position ->
+        adapter.setActionListener((view,position) ->
                 Toast.makeText(this
-                        , ((AndroidVersion) adapter.getItemAtPosition(position)).getName()
+                        , adapter.getItemAtPosition(position).getName()
                         , Toast.LENGTH_SHORT).show());
     }
     private void setupGoogleProductRecyclerView() {
